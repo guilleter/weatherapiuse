@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Fucnionando</h1>
+<%- include("partials/header.ejs") %>
+
+<!-- seccion principal de la tarjeta de la app -->
+<section>
+<div class="container tarjeta d-flex">
+  <h1>Fucnionando</h1>
    
     <% if (locals.temp) {%>
 
       <img src="<%=imagen%>" alt="">  <p><%=temp%> °C</p>
         
-    <%  }%>
-</body>
+    <%}%>
+ 
+  </body>
+</div>
+</section>
 </html>
+<%- include("partials/footer.ejs") %>

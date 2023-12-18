@@ -2,7 +2,7 @@ import axios from "axios";
 import express from "express";
 
 const app=express();
-const port=3000;
+const port=5000;
 const config={
     params: {
         q: '-27.36,-55.89'
@@ -12,6 +12,7 @@ const config={
         'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
     }
 }
+app.use(express.static("public"));
 
 app.get("/",async(req,res)=>{
     const response= await axios.get("https://weatherapi-com.p.rapidapi.com/current.json",config);
