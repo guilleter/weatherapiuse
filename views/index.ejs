@@ -1,15 +1,52 @@
 <%- include("partials/header.ejs") %>
 
 <!-- seccion principal de la tarjeta de la app -->
+<h5 class="card-title">Clima</h5>
 <section>
-<div class="container tarjeta d-flex">
-  <h1>Fucnionando</h1>
+<div class="container tarjeta card">
+  
+  <div class="container dentro">
    
-    <% if (locals.temp) {%>
+   
+      
+      
+    
+      <div class="icono tabla">
+        <img class="icon" src="<%=imagen%>" alt="">  
+      </div>
+      <div class="temp tabla" >
+        <p class="card-text"><%=temp%> °C</p>
+      </div>
+      <div class="tabla">
+        <p>Viento</p>
+      </div>
+      <div class="tabla">
+        <p>velocidad de viento</p>
+      </div>  
+      <div class="tabla">
+        <p>Humedad</p>
+      </div>  
+      <div class="tabla">
+        <p>76%</p>
+      </div>
+      <div class="tabla">
+        <p>UV</p>
+      </div>
+      <div class="tabla">
+        <p>MUcho poco?</p>
+      </div>
+      <div class="tabla">
+        <p>Mañana</p>
+      </div>
+      <div class="tabla">
+        <p>lluvia </p>
+      </div>
+      
+     
+      
 
-      <img src="<%=imagen%>" alt="">  <p><%=temp%> °C</p>
-        
-    <%}%>
+    </div>
+  </div>
  
   </body>
 </div>

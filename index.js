@@ -2,7 +2,7 @@ import axios from "axios";
 import express from "express";
 
 const app=express();
-const port=5000;
+const port=3000;
 const config={
     params: {
         q: '-27.36,-55.89'
@@ -15,10 +15,16 @@ const config={
 app.use(express.static("public"));
 
 app.get("/",async(req,res)=>{
-    const response= await axios.get("https://weatherapi-com.p.rapidapi.com/current.json",config);
-    console.log(response.data);
-    res.render("index.ejs",{temp:response.data.current.temp_c,imagen:response.data.current.condition.icon});
     console.log("arrancamo");
+    try {
+        const response= await axios.get("https://weatherapi-com.p.rapidapi.com/current.json",config);
+        console.log(response.data);
+        res.render("index.ejs",{temp:response.data.current.temp_c,imagen:response.data.current.condition.icon});
+        
+    } catch (error) {
+        
+    }
+    //aca falta poner un try catch que me renderize una index.ejs para el error con mi footer :D
 })
 
 app.listen(port, () => {

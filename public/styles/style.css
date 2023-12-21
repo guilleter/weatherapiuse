@@ -2,6 +2,35 @@ body{
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,6,125,0.9345938204383316) 100%);
 }
+
+
+.card{
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(219,15,15,1) 65%, rgba(2,0,36,1) 94%);
+}
+
 .tarjeta{
-   justify-content: center;
+
+
+}
+
+.dentro{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+}
+.temp{
+    background-color: aliceblue;
+    grid-row: span 2;
+    font-size: 3em ;
+}
+.icono{
+    
+    background-color: brown;
+    grid-row:span 2;
+}
+.tabla{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
