@@ -3,19 +3,25 @@
 <!-- seccion principal de la tarjeta de la app -->
 <h5 class="card-title">Clima</h5>
 <section>
-<div class="container tarjeta card">
-  
-  <div class="container dentro">
-   
-   
-      
-      
+  <div class="container tarjeta card">
     
+    <div class="container dentro">
+      
+      
+      
+      
+      
       <div class="icono tabla">
         <img class="icon" src="<%=data.condition.icon%>" alt="">  
       </div>
       <div class="temp tabla" >
         <p class="card-text"><%=data.temp_c%> °C</p>
+      </div>
+      <div class="tabla">
+        <p>Sensación Termica</p>
+      </div>
+      <div class="tabla">
+        <p><%=data.feelslike_c %></p>
       </div>
       <div class="tabla">
         <p>Viento</p>
@@ -45,12 +51,6 @@
           <% }else if(data.uv>10){ %>
             <p>Extremo</p>
            <% } %>
-      </div>
-      <div class="tabla">
-        <p>Mañana</p>
-      </div>
-      <div class="tabla">
-        <p>lluvia</p>
       </div>
       
      
