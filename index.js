@@ -19,12 +19,11 @@ app.get("/",async(req,res)=>{
     try {
         const response= await axios.get("https://weatherapi-com.p.rapidapi.com/current.json",config);
         console.log(response.data);
-        res.render("index.ejs",{temp:response.data.current.temp_c,imagen:response.data.current.condition.icon});
+        res.render("index.ejs",{data:response.data});
         
     } catch (error) {
-        
+        console.error("Failed to make request:", error.message);
     }
-    //aca falta poner un try catch que me renderize una index.ejs para el error con mi footer :D
 })
 
 app.listen(port, () => {
