@@ -10,28 +10,28 @@
       </div>
       <div class="temp tabla">
         <p class="card-text">
-          <%=data.temp_c%> °C
+          <%=data.temp_f%> °F
         </p>
       </div>
       <div class="tabla">
-        <p>Sensación Termica</p>
+        <p>Feel Like</p>
       </div>
       <div class="tabla">
         <p>
-          <%=data.feelslike_c %>
+          <%=data.feelslike_f %>
         </p>
       </div>
       <div class="tabla">
-        <p>Viento</p>
+        <p>Wind</p>
       </div>
       <div class="tabla">
         <p>
-          <%= data.wind_kph %>
+          <%= data.wind_mph %>
             <%=data.wind_dir %>
         </p>
       </div>
       <div class="tabla">
-        <p>Humedad</p>
+        <p>Humidity</p>
       </div>
       <div class="tabla">
         <p>
@@ -44,15 +44,15 @@
       <div class="tabla">
   
         <% if (data.uv>0&&data.uv<4) { %>
-            <p>Bajo</p>
+            <p>Low</p>
             <% }else if(data.uv>4&&data.uv<6){%>
-                <p>Moderado</p>
+                <p>Moderate</p>
                 <% }else if(data.uv>5&&data.uv<8){ %>
-                    <p>Alto</p>
+                    <p>High</p>
                     <% }else if(data.uv>7&&data.uv<11){ %>
-                        <p>Muy Alto</p>
+                        <p>Very High</p>
                         <% }else if(data.uv>10){ %>
-                          <p>Extremo</p>
+                          <p>Extrem</p>
                           <% } %>
       </div>
   

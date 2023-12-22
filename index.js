@@ -25,6 +25,16 @@ app.get("/",async(req,res)=>{
         console.error("Failed to make request:", error.message);
     }
 })
+app.post("/en",async(req,res)=>{
+    try {
+        const response= await axios.get("https://weatherapi-com.p.rapidapi.com/current.json",config);
+        console.log(response.data);
+        res.render("indexen.ejs",{data:response.data.current,location:response.data.location});
+        console.log(response.location);
+    } catch (error) {
+        console.error("Failed to make request:", error.message);
+    }
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
