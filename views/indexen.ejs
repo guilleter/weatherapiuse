@@ -18,7 +18,7 @@
       </div>
       <div class="tabla">
         <p>
-          <%=data.feelslike_f %>
+          <%=data.feelslike_f %> °F
         </p>
       </div>
       <div class="tabla">
@@ -26,7 +26,7 @@
       </div>
       <div class="tabla">
         <p>
-          <%= data.wind_mph %>
+          <%= data.wind_mph %> MPH
             <%=data.wind_dir %>
         </p>
       </div>
@@ -35,7 +35,7 @@
       </div>
       <div class="tabla">
         <p>
-          <%=data.humidity%>
+          <%=data.humidity%> %
         </p>
       </div>
       <div class="tabla">
@@ -52,7 +52,7 @@
                     <% }else if(data.uv>7&&data.uv<11){ %>
                         <p>Very High</p>
                         <% }else if(data.uv>10){ %>
-                          <p>Extrem</p>
+                          <p>Extreme</p>
                           <% } %>
       </div>
   
